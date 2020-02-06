@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>相遇的悲哀 | Gridea</title>
+<link rel="shortcut icon" href="https://baisheng.github.io/favicon.ico?v=1580995789195">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://baisheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="相遇的悲哀 | Gridea - Atom Feed" href="https://baisheng.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="相遇的悲哀
+两颗相遇的流星.
+用瞬间的光芒照亮彼此最远的距离……
+瞬间的注视.
+瞬间的离别.
+擦肩而过的时刻.
+刻下你无助的眼神……
+永恒的分别.
+永恒的记忆.
+永恒的我们.
+永恒的爱.
+永恒的只能各自己奔向相反的天际……
+岁月流转,
+时光..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://baisheng.github.io">
+  <img class="avatar" src="https://baisheng.github.io/images/avatar.png?v=1580995789195" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              相遇的悲哀
+            </h2>
+            <div class="post-info">
+              <span>
+                2004-09-11
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>相遇的悲哀</p>
+<p>两颗相遇的流星.<br>
+用瞬间的光芒照亮彼此最远的距离……</p>
+<p>瞬间的注视.<br>
+瞬间的离别.<br>
+擦肩而过的时刻.<br>
+刻下你无助的眼神……</p>
+<p>永恒的分别.<br>
+永恒的记忆.<br>
+永恒的我们.<br>
+永恒的爱.<br>
+永恒的只能各自己奔向相反的天际……</p>
+<p>岁月流转,<br>
+时光渐逝.<br>
+当一切都已不在的时刻.<br>
+我依然会用最真的记忆为你渲染曾经的美丽…….</p>
+<p>给我曾经.现在.最爱的人……</p>
+<p>“你,是我永远最爱的.但却也是我永远不能得到的.想你……”</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://baisheng.github.io/post/shi-me-cai-shi-zhen-zheng-zui-chong-yao-de-dong-xi">
+              <h3 class="post-title">
+                什么才是真正最重要的东西?
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://baisheng.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

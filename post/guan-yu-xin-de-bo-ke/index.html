@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于新的博客 | Gridea</title>
+<link rel="shortcut icon" href="https://baisheng.github.io/favicon.ico?v=1580995789195">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://baisheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="关于新的博客 | Gridea - Atom Feed" href="https://baisheng.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="新的一年的来到并没有给我更多的惊喜，暂时我唯一得到，并且永远不会失去的就是，我又长一岁。
+　　早就想弄一个完全属于自己的东西了，但一直没时间也没心情，不过终于决定下来。于是就有了它，WordPress程序搭建的博客，之所以选择WordPre..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://baisheng.github.io">
+  <img class="avatar" src="https://baisheng.github.io/images/avatar.png?v=1580995789195" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              关于新的博客
+            </h2>
+            <div class="post-info">
+              <span>
+                2005-01-05
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>新的一年的来到并没有给我更多的惊喜，暂时我唯一得到，并且永远不会失去的就是，我又长一岁。<br>
+　　早就想弄一个完全属于自己的东西了，但一直没时间也没心情，不过终于决定下来。于是就有了它，WordPress程序搭建的博客，之所以选择WordPress主要是因为我对它比较熟悉，在它之前我还用过Textpattern这套程序，它也是非常优秀的，但是发现在内地用的朋友很少。不过还是让我找到了两个有兴趣的可以去看一下，Feiliao’s blog国内的，Jenny’s blog台湾的。Khod这个是国外，也是我看过用Textpattern这个程序中，改的最漂亮的一个。<br>
+　　我以后可能还会用Textpattern玩玩的。不过现在感觉还是WordPress较好，至少插件较多，支持的朋友也很多，最重要的是国内玩这个的朋友很多，交流方便一些。。。<br>
+　　最近几天准备做一个模版，既然空间有了，程序有了，那么一定要装装门面，嗯，还要将我以前的博客的一些重要点的数据弄到这里来。唉，麻烦！</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://baisheng.github.io/post/mi-shi-tao-sheng-zhi-lan-se-mi-shi">
+              <h3 class="post-title">
+                密室逃生之{蓝色密室}
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://baisheng.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

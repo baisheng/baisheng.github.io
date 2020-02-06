@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>大年三十 | Gridea</title>
+<link rel="shortcut icon" href="https://baisheng.github.io/favicon.ico?v=1580995789195">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://baisheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="大年三十 | Gridea - Atom Feed" href="https://baisheng.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="饺子吃完了，新年的钟声也已敲响，但是我却没有一丝新年的感觉？今年没有放烟花，长大了？不想了？不是，也许是不希望自己一个人去享受这种美好的乐趣吧！外面爆竹声声，欢歌笑语，新的一年了，对每个人来讲都是新的一年，新的一天，还有新的希望，新的……
+..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://baisheng.github.io">
+  <img class="avatar" src="https://baisheng.github.io/images/avatar.png?v=1580995789195" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              大年三十
+            </h2>
+            <div class="post-info">
+              <span>
+                2005-02-09
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>饺子吃完了，新年的钟声也已敲响，但是我却没有一丝新年的感觉？今年没有放烟花，长大了？不想了？不是，也许是不希望自己一个人去享受这种美好的乐趣吧！外面爆竹声声，欢歌笑语，新的一年了，对每个人来讲都是新的一年，新的一天，还有新的希望，新的……<br>
+　　一切，一切都是新的，就像明天东方升起来的太阳。在这样的时光里我不但一直找不到新年的感觉，并且还感到了一丝疲惫，也许是酒喝多了吧？不过真的没有喝多少，这些年了我从未喝醉过，即使喝了很多，最多也就晕晕的。我想或许是久闷在家中造成的身心疲惫吧！该出去走走了，该去结交更多新的朋友了，该是迎接曙光的时刻了！<br>
+　　朋友们，新年快乐！！！</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://baisheng.github.io/post/lesslessxian-jian-qi-xia-chuan-greatergreater-cha-qu-lesslessxiao-yao-tan-greatergreater">
+              <h3 class="post-title">
+                《仙剑奇侠传》插曲–《逍遥叹》
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://baisheng.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

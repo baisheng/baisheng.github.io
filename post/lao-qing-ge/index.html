@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>老情歌 | Gridea</title>
+<link rel="shortcut icon" href="https://baisheng.github.io/favicon.ico?v=1580995789195">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://baisheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="老情歌 | Gridea - Atom Feed" href="https://baisheng.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="岁月如歌，这句话永远经典。不知曾几何时，我已慢慢长大，慢慢成熟，慢慢地学会了回忆。 昨天听着收音机的音乐广播节目，突听音乐ＤＪ说：“我们应向何炅老师学习……”。我一愣，何炅老师？就是那个曾经卖“幸福鞋垫＂的何炅？是啊，时光早已飞逝，幸福鞋垫..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://baisheng.github.io">
+  <img class="avatar" src="https://baisheng.github.io/images/avatar.png?v=1580995789195" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              老情歌
+            </h2>
+            <div class="post-info">
+              <span>
+                2005-07-18
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>岁月如歌，这句话永远经典。不知曾几何时，我已慢慢长大，慢慢成熟，慢慢地学会了回忆。 昨天听着收音机的音乐广播节目，突听音乐ＤＪ说：“我们应向何炅老师学习……”。我一愣，何炅老师？就是那个曾经卖“幸福鞋垫＂的何炅？是啊，时光早已飞逝，幸福鞋垫是1994年的事情了，现在是2005年了，十年了，十年……经历了多少？失去了多少？一切随歌，一切都成为历史。这个十年中我从学校进入了社会，从社会中学会了现实，学会了不在盲目的幻想，变得更加的虚伪，变得更加无奈！一首老情歌让我突然伤感，虽未被爱，但曾爱过。</p>
+<p>纵然时间飞逝，纵然被世俗所累，纵然未曾被爱，但我依然快乐，因为我还活着……</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://baisheng.github.io/post/guan-yu-zi-you-yu-he-chang-bi-sai">
+              <h3 class="post-title">
+                关于自由与合唱比赛
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://baisheng.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

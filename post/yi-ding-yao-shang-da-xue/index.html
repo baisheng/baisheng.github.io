@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>一定要上大学? | Gridea</title>
+<link rel="shortcut icon" href="https://baisheng.github.io/favicon.ico?v=1580995789195">
+<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://baisheng.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="一定要上大学? | Gridea - Atom Feed" href="https://baisheng.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="自从当初在高中放弃学业之后,虽然不曾后悔但是总有些遗憾.
+现在最好的几个朋友都在名牌大学学习,我为他们高兴,同时也为自已感到愧疚.怎么说呢!可能有些自卑?不知道.
+不过曾经我的确很自卑,但是后来踏入社会之后,我想了很多,其实所谓的成功重要是..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://baisheng.github.io">
+  <img class="avatar" src="https://baisheng.github.io/images/avatar.png?v=1580995789195" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              一定要上大学?
+            </h2>
+            <div class="post-info">
+              <span>
+                2004-08-20
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>自从当初在高中放弃学业之后,虽然不曾后悔但是总有些遗憾.</p>
+<p>现在最好的几个朋友都在名牌大学学习,我为他们高兴,同时也为自已感到愧疚.怎么说呢!可能有些自卑?不知道.</p>
+<p>不过曾经我的确很自卑,但是后来踏入社会之后,我想了很多,其实所谓的成功重要是来自己于自己的努力,而不是来于什么地方,什么环境.当然环境良好有助于成功,可最好的环境是来自于自己的心灵……</p>
+<p>因此我现在一直在努力.<br>
+可以让天下的人因自己失望,却不可以让自己因自己失望……</p>
+<p>这就如同做一件开始并不为世人所接受的事情一样.它的开始或许有着千百人的耻笑,可它的成功却会受着千万人的信奉……</p>
+<p>我们不必在乎开始的笑料,但我们却一定要注重我们所坚持的结果…无论事业.爱情.等等……</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://baisheng.github.io/post/wo-men-shi-fou-bian-de-leng-mo-sui-bi">
+              <h3 class="post-title">
+                我们是否变得冷漠(随笔)
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://baisheng.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
